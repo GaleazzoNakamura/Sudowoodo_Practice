@@ -1,44 +1,36 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">   <!-- font pixeloso -->
-    <meta charset="UTF-8">
-    <title>Bonsly</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            font-family: 'Press Start 2P', monospace;
-            background: #1a1a2e;
-            color: #fff;
-        }
-        img {
-            width: 80px;
-            height: 80px;
-            cursor: pointer;
-        }
-        p {
-            font-size: 1.2rem;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <img id="poke" src="bon_p.png" alt="Bonsly">
-    <p id="testo">Fai Click su Bonsly per farlo evolvere</p>
-    <audio id="suono" src="tada.wav"></audio>
-
-    <script>
-        document.getElementById('poke').addEventListener('click', function() {
-            this.src = 'sudo_p.png';
-            this.alt = 'Sudowoodo';
-            document.getElementById('suono').play();
-            document.getElementById('testo').style.display = 'none';   
-        });
-    </script>
-</body>
-</html>   
+<html>
+	<head>
+		<title>Sudowoodo</title>
+		<link rel="icon" type="sudo_fav" href="sudo_fav.png">
+		<style>
+			body {
+				background-color:#191970;
+				font-size: 24px;
+				text-align: center;
+				}
+			img {
+				width: 512px
+				height: 512px
+				cursor: pointer;
+				}
+			p  {
+				color: white;
+				font-family: 'Calibri', sans-serif;
+				}
+		</style>
+	</head>
+	<body>
+		<img
+			src="bon.png" 
+			alt="Bonsly" 
+			onclick="if (this.src.includes('bon.png'))
+				{this.src='sudo.png';
+				new Audio('tada.wav').play();
+				document.getElementById('evolve').textContent='Tadan!';}"
+  		>
+		<p id='evolve'>
+			Clicca su Bonsly per farlo Evolvere
+		</p>
+	</body>
+</html>

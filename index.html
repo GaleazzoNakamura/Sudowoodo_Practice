@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Bonsly Evolution</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            background: #1a1a2e;
+            color: #fff;
+        }
+        img {
+            width: 512px;
+            height: 512px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p id="testo">Fai Click su Bonsly per farlo evolvere</p>
+    <img id="poke" src="bon.png" alt="Bonsly">
+    <audio id="suono" src="tada.wav"></audio>
+
+    <script>
+        document.getElementById('poke').addEventListener('click', function() {
+            this.src = 'sudo.png';
+            this.alt = 'Sudowoodo';
+            document.getElementById('suono').play();
+            document.getElementById('testo').style.display = 'none';   
+        });
+    </script>
+</body>
+</html>   

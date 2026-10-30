@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Sudowoodo</title>
-		<link rel="icon" type="sudo_fav" href="sudo_fav.png">
+		<link rel="icon" type="image/png" href="sudo_fav.png">
 		<style>
 			body {
 				background-color:#191970;
@@ -10,8 +10,8 @@
 				text-align: center;
 				}
 			img {
-				width: 512px
-				height: 512px
+				width: 512px;
+				height: 512px;
 				cursor: pointer;
 				}
 			p  {
@@ -21,14 +21,17 @@
 		</style>
 	</head>
 	<body>
+		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>   
 		<img
 			src="bon.png" 
 			alt="Bonsly" 
 			onclick="if (this.src.includes('bon.png'))
 				{this.src='sudo.png';
 				new Audio('tada.wav').play();
-				document.getElementById('evolve').textContent='Tadan!';}"
-  		>
+				confetti({
+       				particleCount: 100,
+        			spread: 70});
+				document.getElementById('evolve').textContent='Tadan!';}">
 		<p id='evolve'>
 			Clicca su Bonsly per farlo Evolvere
 		</p>

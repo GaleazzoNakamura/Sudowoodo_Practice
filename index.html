@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">   <!-- font pixeloso -->
     <meta charset="UTF-8">
-    <title>Bonsly Evolution</title>
+    <title>Bonsly</title>
     <style>
         body {
             display: flex;
@@ -11,30 +12,29 @@
             justify-content: center;
             min-height: 100vh;
             margin: 0;
-            font-family: sans-serif;
+            font-family: 'Press Start 2P', monospace;
             background: #1a1a2e;
             color: #fff;
         }
         img {
-            width: 512px;
-            height: 512px;
+            width: 80px;
+            height: 80px;
             cursor: pointer;
-            border-radius: 12px;
         }
         p {
             font-size: 1.2rem;
-            margin-bottom: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <img id="poke" src="bon.png" alt="Bonsly">
+    <img id="poke" src="bon_p.png" alt="Bonsly">
     <p id="testo">Fai Click su Bonsly per farlo evolvere</p>
     <audio id="suono" src="tada.wav"></audio>
 
     <script>
         document.getElementById('poke').addEventListener('click', function() {
-            this.src = 'sudo.png';
+            this.src = 'sudo_p.png';
             this.alt = 'Sudowoodo';
             document.getElementById('suono').play();
             document.getElementById('testo').style.display = 'none';   
